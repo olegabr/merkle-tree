@@ -34,7 +34,7 @@ class FixedSizeTree
      * @param callable $hasher
      * @param callable|null $finished
      */
-    public function __construct(int $width, callable $hasher, callable $finished = null)
+    public function __construct(int $width, callable $hasher, ?callable $finished = null)
     {
         if ($width < 1) {
             throw new UnexpectedValueException('width cannot be less than 1');

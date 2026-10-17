@@ -9,16 +9,18 @@
     }
   ],
   "require": {
-    "php": ">=7.0"
+    "php": "^7.0|^8.0"
   },
   "require-dev": {
-    "phpunit/phpunit": "^6.5 || ^7.5 || ^8.5 || ^9.4",
-    "php-coveralls/php-coveralls": "^2.4",
-    "sanmai/phpunit-legacy-adapter": "^6 || ^8"
+    "phpunit/phpunit": "^9.6",
+    "sanmai/phpunit-legacy-adapter": "^8.0"
   },
   "autoload": {
     "psr-4": {
       "Pleo\\Merkle\\": "src/"
     }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit"
   }
 }

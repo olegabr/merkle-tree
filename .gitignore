@@ -3,3 +3,7 @@
 /phpunit.xml
 /composer.lock
 /.phpunit*
+
+# agent scratch files (disposable)
+.agent-tmp/
+.phpunit.result.cache
