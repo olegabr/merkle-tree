@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <phpunit
   colors="true"
   columns="120">
@@ -6,17 +7,14 @@
       <directory>tests</directory>
     </testsuite>
   </testsuites>
-  <coverage
-    includeUncoveredFiles="true"
-    processUncoveredFiles="true"
-    pathCoverage="true">
+  <!-- Coverage is opt-in: run PHPUnit with the coverage driver enabled and ask
+       for a report on the command line. A report block here would make every
+       plain run ask for a coverage driver (path coverage even needs Xdebug),
+       which only produced warnings in CI. -->
+  <coverage>
     <include>
-      <directory>src</directory>
+      <directory suffix=".php">src</directory>
     </include>
-    <report>
-      <clover outputFile="build/clover.xml" />
-      <html outputDirectory="build/html" />
-    </report>
   </coverage>
   <php>
     <ini name="memory_limit" value="-1" />
