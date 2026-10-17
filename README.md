@@ -35,7 +35,7 @@ at the repository:
         { "type": "vcs", "url": "https://github.com/olegabr/merkle-tree" }
     ],
     "require": {
-        "pleonasm/merkle-tree": "^2.0"
+        "pleonasm/merkle-tree": "^2.1"
     }
 }
 ```
