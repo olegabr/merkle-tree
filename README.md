@@ -1,16 +1,20 @@
 # Merkle Tree Implementation #
 
-[![Build Status](https://travis-ci.org/pleonasm/merkle-tree.png?branch=master)](https://travis-ci.org/pleonasm/merkle-tree)
-[![Coverage Status](https://coveralls.io/repos/github/pleonasm/merkle-tree/badge.svg?branch=master)](https://coveralls.io/github/pleonasm/merkle-tree?branch=master)
+[![CI](https://github.com/olegabr/merkle-tree/actions/workflows/ci.yml/badge.svg)](https://github.com/olegabr/merkle-tree/actions/workflows/ci.yml)
 
 This is an implementation of a hash tree or [Merkle Tree](http://en.wikipedia.org/wiki/Merkle_Tree)
 for PHP. 
+
+This repository is the EthereumICO fork of the library
+([olegabr/merkle-tree](https://github.com/olegabr/merkle-tree)). It keeps the
+`pleonasm/merkle-tree` package name and adds PHP 8.x support plus tests for
+`GrowableBinaryTree`.
 
 ## Install ##
 
 Install via [Composer](http://getcomposer.org) (make sure you have composer in your path or in your project).
 
-Put the following in your package.json:
+Put the following in your composer.json:
 
 ```javascript
 {
@@ -21,6 +25,20 @@ Put the following in your package.json:
 ```
 
 Then run `composer install`.
+
+The fork is not published on Packagist, so projects that need it point Composer
+at the repository:
+
+```json
+{
+    "repositories": [
+        { "type": "vcs", "url": "https://github.com/olegabr/merkle-tree" }
+    ],
+    "require": {
+        "pleonasm/merkle-tree": "^2.0"
+    }
+}
+```
 
 ## Usage For A Fixed Size Tree ##
 
